@@ -1,0 +1,74 @@
+{
+    "translation": {
+        "common": {
+            "welcome": "እንኳን ወደ አክሱም ጨረታ በደህና መጡ",
+            "login": "ግባ",
+            "register": "ይመዝገቡ",
+            "logout": "ውጣ",
+            "submit": "አስገባ",
+            "cancel": "ሰርዝ",
+            "save": "አስቀምጥ",
+            "delete": "ሰርዝ",
+            "edit": "አስተካክል",
+            "back": "ተመለስ",
+            "next": "ቀጣይ",
+            "loading": "በመጫን ላይ...",
+            "error": "ስህተት",
+            "success": "ተሳክቷል"
+        },
+        "auth": {
+            "emailOrPhone": "ኢሜይል ወይም ስልክ",
+            "password": "የይለፍ ቃል",
+            "username": "የተጠቃሚ ስም",
+            "email": "ኢሜይል",
+            "phone": "ስልክ ቁጥር",
+            "confirmPassword": "የይለፍ ቃል አረጋግጥ",
+            "loginTitle": "ወደ አክሱም ጨረታ ግባ",
+            "registerTitle": "መለያ ፍጠር",
+            "otpTitle": "OTP አረጋግጥ",
+            "otpSent": "OTP ወደ ኢሜይል/ስልክዎ ተልኳል",
+            "enterOtp": "6-አሃዝ OTP ያስገቡ",
+            "noAccount": "መለያ የለዎትም?",
+            "haveAccount": "መለያ አለዎት?",
+            "forgotPassword": "የይለፍ ቃል ረሱ?"
+        },
+        "auction": {
+            "title": "ጨረታዎች",
+            "createAuction": "ጨረታ ፍጠር",
+            "myAuctions": "የኔ ጨረታዎች",
+            "activeAuctions": "ንቁ ጨረታዎች",
+            "endedAuctions": "የተጠናቀቁ ጨረታዎች",
+            "auctionTitle": "የጨረታ ርዕስ",
+            "description": "መግለጫ",
+            "startingPrice": "መጀመሪያ ዋጋ",
+            "currentPrice": "የአሁን ዋጋ",
+            "endTime": "የማብቂያ ጊዜ",
+            "placeBid": "ጨረታ አስገባ",
+            "bidAmount": "የጨረታ መጠን",
+            "bidHistory": "የጨረታ ታሪክ",
+            "noBids": "ገና ምንም ጨረታ የለም",
+            "status": "ሁኔታ",
+            "pending": "በመጠባበቅ ላይ",
+            "active": "ንቁ",
+            "ended": "ተጠናቅቋል",
+            "paid": "ተከፍሏል"
+        },
+        "bidding": {
+            "yourBid": "የእርስዎ ጨረታ",
+            "minimumBid": "ዝቅተኛ ጨረታ",
+            "placeBidButton": "ጨረታ አስገባ",
+            "bidPlaced": "ጨረታ በተሳካ ሁኔታ ገብቷል!",
+            "bidRejected": "ጨረታ ተቀባይነት አላገኘም",
+            "auctionExtended": "ጨረታ በ2 ደቂቃዎች ተራዝሟል!",
+            "highestBidder": "እርስዎ ከፍተኛ ጨራች ነዎት",
+            "outbid": "ተሸንፈዋል"
+        },
+        "payment": {
+            "payNow": "አሁን ይክፈሉ",
+            "paymentSuccess": "ክፍያ ተሳክቷል",
+            "paymentFailed": "ክፍያ አልተሳካም",
+            "amount": "መጠን",
+            "transactionId": "የግብይት መታወቂያ"
+        }
+    }
+}

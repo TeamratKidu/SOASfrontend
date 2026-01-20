@@ -1,0 +1,74 @@
+{
+    "translation": {
+        "common": {
+            "welcome": "Welcome to AxumAuction",
+            "login": "Login",
+            "register": "Register",
+            "logout": "Logout",
+            "submit": "Submit",
+            "cancel": "Cancel",
+            "save": "Save",
+            "delete": "Delete",
+            "edit": "Edit",
+            "back": "Back",
+            "next": "Next",
+            "loading": "Loading...",
+            "error": "Error",
+            "success": "Success"
+        },
+        "auth": {
+            "emailOrPhone": "Email or Phone",
+            "password": "Password",
+            "username": "Username",
+            "email": "Email",
+            "phone": "Phone Number",
+            "confirmPassword": "Confirm Password",
+            "loginTitle": "Login to AxumAuction",
+            "registerTitle": "Create Account",
+            "otpTitle": "Verify OTP",
+            "otpSent": "OTP sent to your email/phone",
+            "enterOtp": "Enter 6-digit OTP",
+            "noAccount": "Don't have an account?",
+            "haveAccount": "Already have an account?",
+            "forgotPassword": "Forgot Password?"
+        },
+        "auction": {
+            "title": "Auctions",
+            "createAuction": "Create Auction",
+            "myAuctions": "My Auctions",
+            "activeAuctions": "Active Auctions",
+            "endedAuctions": "Ended Auctions",
+            "auctionTitle": "Auction Title",
+            "description": "Description",
+            "startingPrice": "Starting Price",
+            "currentPrice": "Current Price",
+            "endTime": "End Time",
+            "placeBid": "Place Bid",
+            "bidAmount": "Bid Amount",
+            "bidHistory": "Bid History",
+            "noBids": "No bids yet",
+            "status": "Status",
+            "pending": "Pending",
+            "active": "Active",
+            "ended": "Ended",
+            "paid": "Paid"
+        },
+        "bidding": {
+            "yourBid": "Your Bid",
+            "minimumBid": "Minimum Bid",
+            "placeBidButton": "Place Bid",
+            "bidPlaced": "Bid placed successfully!",
+            "bidRejected": "Bid rejected",
+            "auctionExtended": "Auction extended by 2 minutes!",
+            "highestBidder": "You are the highest bidder",
+            "outbid": "You have been outbid"
+        },
+        "payment": {
+            "payNow": "Pay Now",
+            "paymentSuccess": "Payment Successful",
+            "paymentFailed": "Payment Failed",
+            "amount": "Amount",
+            "transactionId": "Transaction ID"
+        }
+    }
+}
