@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Star } from "lucide-react"
 import api from "@/lib/api"
-import { useAuthStore } from "@/stores/authStore"
+
 
 interface FeedbackSectionProps {
     auctionId: string

@@ -302,10 +302,7 @@ export const useAuthStore = create<AuthState>()(
             upgradeToSeller: async (data: any) => {
                 set({ isLoading: true });
                 try {
-                    const response = await api.post('/users/upgrade-to-seller', data);
-
-                    // Update local user state if successful
-                    const _updatedUser = response.data;
+                    await api.post('/users/upgrade-to-seller', data);
 
                     set((state) => ({
                         user: state.user ? { ...state.user, role: 'seller' } : null

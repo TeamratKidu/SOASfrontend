@@ -25,7 +25,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 }
 
 export function useAuth() {
-    const { user, isLoading, signIn, signOut, signUp, upgradeToSeller, setUser } = useAuthStore();
+    const { user, isLoading, signIn, signOut, signUp, upgradeToSeller: _upgradeToSeller, setUser } = useAuthStore();
 
     // Map Zustand state/methods to the expected Context shape
     const adaptedUser: User | null = user ? {
@@ -66,7 +66,7 @@ export function useAuth() {
         // Use store method if available and compatible, or service
         // store has upgradeToSeller but with no args?
         // Let's use service + store update for safety
-        const response = await authService.upgradeToSeller(data);
+        await authService.upgradeToSeller(data);
         if (user) {
             setUser({ ...user, role: 'seller' });
         }
