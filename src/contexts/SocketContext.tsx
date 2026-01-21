@@ -23,10 +23,22 @@ export function SocketProvider({ children }: { children: ReactNode }) {
     useEffect(() => {
         if (!user) return;
 
-        const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:3000';
-        const newSocket = io(`${WS_URL}/bidding`, {
+        // Use VITE_API_URL for socket connection to ensure consistency
+        const getSocketUrl = () => {
+            const envUrl = import.meta.env.VITE_API_URL;
+            if (envUrl) {
+                // Ensure no trailing slash
+                const cleanUrl = envUrl.replace(/\/$/, '');
+                return `${cleanUrl}/bidding`;
+            }
+            return "/bidding"; // Local dev fallback
+        };
+
+        const newSocket = io(getSocketUrl(), {
             auth: { userId: user.id },
-            transports: ['websocket'],
+            transports: ['websocket', 'polling'], // Allow polling fallbacks
+            path: "/socket.io",
+            withCredentials: true,
             reconnection: true,
             reconnectionDelay: 1000,
             reconnectionDelayMax: 5000,

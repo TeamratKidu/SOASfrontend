@@ -538,8 +538,10 @@ export function AuctionDetailPremium({ auction }: AuctionDetailPremiumProps) {
                                 Live Activity Log
                             </h3>
                             <div className="flex items-center gap-1.5">
-                                <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                                <span className="text-[10px] font-mono uppercase text-slate-500 dark:text-[#b6b1a0]">Connected</span>
+                                <span className={`w-2 h-2 rounded-full ${socket?.connected ? 'bg-green-500 animate-pulse' : 'bg-red-500'}`}></span>
+                                <span className="text-[10px] font-mono uppercase text-slate-500 dark:text-[#b6b1a0]">
+                                    {socket?.connected ? 'Connected' : 'Disconnected'}
+                                </span>
                             </div>
                         </div>
 
