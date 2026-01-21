@@ -9,12 +9,20 @@ export const getSocket = (): Socket => {
         // But for Socket.IO it often helps to be explicit or use relative path if same domain
         // Since we are proxying /api, we might need to proxy /socket.io as well or point directly
         // For now, let's try relative path with path option if needed, or default
-        // The backend gateway is at /bidding namespace
+        const getSocketUrl = () => {
+            const envUrl = import.meta.env.VITE_API_URL;
+            if (envUrl) {
+                // Ensure no trailing slash
+                const cleanUrl = envUrl.replace(/\/$/, '');
+                return `${cleanUrl}/bidding`;
+            }
+            return "/bidding"; // Local dev fallback
+        };
 
-        socket = io("/bidding", {
+        socket = io(getSocketUrl(), {
             autoConnect: false,
             withCredentials: true,
-            path: "/socket.io", // Default path for NestJS Gateway
+            path: "/socket.io",
             transports: ["websocket", "polling"],
         })
     }
