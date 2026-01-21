@@ -1,7 +1,18 @@
 import axios from "axios"
 
+const getBaseUrl = () => {
+    const envUrl = import.meta.env.VITE_API_URL;
+    if (envUrl) {
+        // Remove trailing slash if present
+        const cleanUrl = envUrl.replace(/\/$/, '');
+        // Append /api if not already present
+        return cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`;
+    }
+    return "/api"; // Default to proxy for local dev
+};
+
 const api = axios.create({
-    baseURL: "/api", // Proxied to localhost:3000 in vite.config.ts
+    baseURL: getBaseUrl(),
     headers: {
         "Content-Type": "application/json",
     },

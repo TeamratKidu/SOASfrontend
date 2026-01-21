@@ -42,7 +42,7 @@ export function CategoryShowcase() {
     }, [])
 
     const categoriesWithCounts = Object.entries(categoryDetails).map(([key, value]) => {
-        const stat = stats.find(s => s.category === key)
+        const stat = Array.isArray(stats) ? stats.find(s => s.category === key) : undefined
         const count = stat?.count || 0
         // Live count not currently available in simple stats endpoint, defaulting to showing just total active
         // Real implementation would need a more detailed stats endpoint or separate counts
